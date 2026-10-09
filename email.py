@@ -27,3 +27,6 @@ if (current_ip != old_ip):
     email.login('rpi790911@gmail.com', password)
     email.sendmail('rpi790911@gmail.com', 'charednich@gmail.com', f'Hello!\nMy current ip is {current_ip}')
     email.quit()
+
+    with open("old_ip.txt", "w", encoding="utf-8") as file:
+        file.write(current_ip)
